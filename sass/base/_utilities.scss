@@ -1,0 +1,94 @@
+.center_items_vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.fill-parent-div {
+    width: 100%;
+    height: 100%;
+}
+
+.sm-padding {
+    padding: 1rem;
+}
+
+.hide {
+    display: none;
+}
+
+.invisible {
+    opacity: 0;
+}
+// Arrow class not filled
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+
+    &__right {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+    }
+
+    &__left {
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+    }
+
+    &__up {
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+    }
+
+    &__down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1040;
+}
+
+// Filled arrows
+.filled-arrow {
+    $filled-arrow-size: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    width: 0; 
+    height: 0; 
+
+    &__up {
+        border-left: $filled-arrow-size/1.5 solid transparent;
+        border-right: $filled-arrow-size/1.5 solid transparent;
+        border-bottom: $filled-arrow-size solid;
+    }
+
+    &__down {
+        border-left: $filled-arrow-size/1.5 solid transparent;
+        border-right: $filled-arrow-size/1.5 solid transparent;
+        border-top: $filled-arrow-size solid;
+    }
+
+    &__left {
+        border-top: $filled-arrow-size/1.5 solid transparent;
+        border-bottom: $filled-arrow-size/1.5 solid transparent;
+        border-right: $filled-arrow-size solid;
+    }
+
+    &__right {
+        border-top: $filled-arrow-size/1.5 solid transparent;
+        border-bottom: $filled-arrow-size/1.5 solid transparent;
+        border-left: $filled-arrow-size solid;
+    }
+}
